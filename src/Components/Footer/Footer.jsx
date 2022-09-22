@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.css"
-import footer from '../../img/wave.png'
+// import footer from '../../img/wave.png'
 import Github from '@iconscout/react-unicons/icons/uil-github'
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin'
 import Insta from '@iconscout/react-unicons/icons/uil-instagram'

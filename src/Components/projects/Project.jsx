@@ -63,7 +63,7 @@ const Project = () => {
                         heading={'Protfolio'}
                         details={"online resume like web app"}
                         url=""
-                        github="https://github.com/rajni3541/social-media"
+                        github="https://github.com/rajni3541/rajni-portfolio"
                     />
                 </div>
                 {/* FIFTH card */}

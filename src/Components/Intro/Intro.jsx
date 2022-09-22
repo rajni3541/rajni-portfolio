@@ -7,46 +7,56 @@ import filename from '../../img/WhatsApp Image 2022-01-11 at 3.33.56 AM.jpeg'
 // import glassesimoji from '../../img/glassesimoji.png'
 // import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import Aos from 'aos'
+import TypeIt from "typeit-react";
 import { useEffect } from 'react'
 
 
 
-const Intro= () => {
+const Intro = () => {
     useEffect(() => {
         Aos.init();
-    },[])
+    }, [])
     return (
-        <div className="intro" data-aos="fade-up">
+        <div className="intro" data-aos="fade-up" id="home">
             <div className="i-left">
                 <div className="i-name">
-                    <span>Hy! I am</span>
-                    <span>Rajni Saini</span>
-                    <span>Mern Stack Developer with high level
+                    <TypeIt options={{
+                        loop: false,
+                        strings: "Hy! I am",
+                        speed: 300,
+                        waitUntilVisible: true,
+                        cursor: false
+                    }} />
+                    <TypeIt options={{
+                        startDelay: 3000,
+                        loop: true,
+                        strings: "Rajni Saini",
+                        speed: 300,
+                        waitUntilVisible: true,
+                        cursor: false
+
+                    }} />
+                    <span className='skills'>Mern Stack Developer with high level
                         of Experience in full Stack development,
-                        producting the quality work</span>
+                        producting the quality work
+                    </span>
                 </div>
 
-                <a href="#contact" style={{textDecoration: 'none', textAlign: 'center'}} className="button i-button">Hire me</a>
-                 <div className="i-icons">
-                     <a href='https://github.com/rajni3541'>
-                     <img src={Github} 
-                     alt="" />
-                     </a>
-                     <a href='https://www.linkedin.com/in/rajnisaini/'>
-                     <img src={LinkedIn} 
-                     alt="" />
-                     </a>
-                 </div>
+                <a href="#contact" style={{ textDecoration: 'none', textAlign: 'center' }} className="button i-button centered">Hire me</a>
+                <div className="i-icons centered">
+                    <a href='https://github.com/rajni3541'>
+                        <img src={Github}
+                            alt="" />
+                    </a>
+                    <a href='https://www.linkedin.com/in/rajnisaini/'>
+                        <img src={LinkedIn}
+                            alt="" />
+                    </a>
+                </div>
             </div>
-           
-                <div className="i-right">
-                <img src={filename} alt="" />
-               {/* <div  style={{top: '-4%' , left: '68%'}}>
-                   MERN DEVELOPER
-               </div> */}
-
+            <div className="i-right">
+                <img src={filename} alt="my profile" />
             </div>
-
         </div>
     )
 }

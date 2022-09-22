@@ -7,34 +7,34 @@ import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import 'aos/dist/aos.css';
+import { useState, createContext } from "react";
 
-// import { themeContext } from './Context';
-import { useState, createContext, useReducer } from "react";
+
 
 export const themeContext = createContext()
 
-const initialState = {darkMode: false};
+// const initialState = {darkMode: false};
 
-const themeReducer = (state, action)=> {
+// const themeReducer = (state, action)=> {
 
-    switch(action.type){
-        case 'TOGGEL' :
-        return {darkMode: !state.darkMode};
-        default:
-            return state;
-    }
-};
+//     switch(action.type){
+//         case 'TOGGEL' :
+//         return {darkMode: !state.darkMode};
+//         default:
+//             return state;
+//     }
+// };
 
 function App() {
 
-  const [state, dispatch] = useReducer (themeReducer, initialState);
+  // const [state, dispatch] = useReducer (themeReducer, initialState);
 
 
-  const handleClick =  () =>{
-    return dispatch({
-      type: 'TOGGEL'
-    })
-  }
+  // const handleClick =  () =>{
+  //   return dispatch({
+  //     type: 'TOGGEL'
+  //   })
+  // }
 
   const [dark, setDark] = useState(false);
 
@@ -42,10 +42,10 @@ function App() {
     setDark(!dark);
   }
 
-  const value = {
-    dark,
-    change: change
-  }
+  // const value = {
+  //   dark,
+  //   change: change
+  // }
   
 
   return (
@@ -55,7 +55,7 @@ function App() {
       color: dark? 'white': '',
     }}
     >
-      <themeContext.Provider value={value}>
+      <themeContext.Provider value={{dark,change}}>
         <Navbar/>
         <Intro />
         <Project />

@@ -8,10 +8,7 @@ const Toggle = () => {
 
   const {change, dark} = useContext(themeContext);
 
-  // const darkMode = theme.state.darkmode;
-  // const handelClick= ()=>{
-  //   theme.dispatch({type: 'toggle'})
-  // }
+  
   return (
     <div className="toggle">
      <Moon/>

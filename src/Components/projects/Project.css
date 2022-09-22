@@ -1,24 +1,17 @@
-.project{
-    display:flex;
-    height:90vh;
-    /* margin-bottom: 8rem; */
-    margin-top: 1rem;
-    /* margin-bottom: 13rem; */
-}
+
 .awesome{
     display: flex;
     flex-direction: column;
-    /* position:relative;
-    margin-bottom: 3rem; */
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.awesome span {
+  display: inline-block;
 }
 
 
-.awesome > :nth-child(1) {
+.awesome > *:nth-child(1) {
 color: darkorchid;
 font-size:2.5rem;
 font-weight: bold;
@@ -27,12 +20,8 @@ text-align: center;
 } 
 
 .s-button{
-    width:8rem;
-    height:2rem;
     margin-top: 1rem;
-    margin-inline: auto;
-    display: flex;
-    text-align: center;
+    padding: 12px 16px;
 }
 
 .cv {
@@ -43,20 +32,38 @@ text-align: center;
     margin-inline: auto;
 }
 .cards{
-    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     gap: 3rem;
     margin-top: 2rem;
 }
 
-.cards > * {
-    margin-right: 2rem;
-}
 
 
 .technologies {
     margin-top: 1.5rem;
     font-size: 1.25rem;
     text-align: center;
+
+}
+
+@media screen and (max-width: 1080px) {
+    .technologies {
+        max-width: 90%;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 480px) {
+.awesome > *:nth-child(1) {
+    font-size: 2rem;
+}
+.awesome > *:nth-child(2) {
+    font-size: 1rem;
+}
+    .cards{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }

@@ -1,9 +1,8 @@
 .experience{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:5rem;
-    height:60vh;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:2rem;
+    margin-bottom: 5rem;
 }
 .achievement{
     display: flex;

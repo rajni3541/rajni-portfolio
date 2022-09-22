@@ -1,57 +1,85 @@
-.contact-form{
- padding: 0 3rem 0 3rem;
- display: grid;
- grid-template-columns: 1fr 1fr;
- align-items: center;
- height: 80vh;
- margin-top: 5rem;
+.contact-form {
+
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-.c-right{
-    /* display: flex;
-    justify-content: space-between;
-    position:relative;
-    flex:1; */
+.c-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex: 1;
+
 }
-.c-right>form{
-display: flex;
-flex-direction: column;
-gap:2rem;
-align-items: center;
+
+.c-right>form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 }
-.c-right .user{
-    width:20rem;
-    height:2rem;
-    padding:0.3rem;
-    outline:none;
-    border:2px solid var(--orange);
-    border-radius:8px;
-    font-size:16px;
+
+.c-right .user {
+    width: 500px;
+    height: 2.5rem;
+    padding: 0.3rem;
+    padding-inline: 1rem;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 400;
 }
-.touch {
-    font-size: 6rem;
+
+.n-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: -5rem;
+    flex: 1;
 }
-.orange {
+
+.n-left .touch {
+    display: block;
+    font-size: 3rem;
+    color: darkorchid;
+}
+
+.n-left .orange {
+    display: block;
     color: var(--orange);
-    font-size: 2.25rem;;
-    margin-top: 1rem;
-}
-textarea{
-    height:4rem!important;
-    border:2px solid var(--orange);
-    border-radius:8px;
-    width:20rem;
-    height:2rem;
-    padding:0.3rem;
-    outline:none;
-    /* font-size:16px; */
-}
-.c-blurl{
-    top: 1rem;
-    left:8rem;
+    font-size: 3rem;
 }
 
 .submit {
-    min-width: 200px;
-    font-size: 1rem;
+    padding: 0.6rem 4rem;
+}
+
+
+@media screen and (max-width:1080px) {
+    .contact-form {
+        flex-direction: column;
+        margin-top: 8rem;
+    }
+
+    .c-right {
+        margin-top: 3rem;
+    }
+
+    .n-left .touch {
+        font-size: 2.5rem;
+    }
+
+    .n-left .orange {
+        font-size: 2.2rem;
+    }
+
+    .c-right .user {
+        max-width: 90vw;
+    }
 }
